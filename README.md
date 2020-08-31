@@ -21,4 +21,79 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+
+# テーブル設計
+
+## usersテーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
+
+### Association
+
+- has_many children
+
+## childrenテーブル
+
+| Column    | Type   | Options     |
+| --------- | ------ | ----------- |
+| name      | string | null: false |
+| birth_day | string | null: false |
+| user      | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to user
+- has_many breasts
+- has_many bottles
+- has_many pees
+- has_many poops
+
+## breastsテーブル
+
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| side   | string | null: false |
+| time   | string |  |
+| child  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to child
+
+## bottlesテーブル
+
+| Column  | Type    | Options     |
+| ------- | ------- | ----------- |
+| content | string  | null: false |
+| amount  | integer | null: false |
+| child   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to child
+
+## peesテーブル
+
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| memo   | text   |  |
+| child  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to child
+
+## poopsテーブル
+
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| memo   | text   |  |
+| child  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to child
