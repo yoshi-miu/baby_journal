@@ -1,0 +1,20 @@
+.main {
+  margin-top: 11vh;
+  margin-bottom: 1vh;
+}
+
+.main-container {
+  background-color: #fff;
+}
+
+th {
+  padding: 10px 30px;
+  background-color: lightskyblue;
+}
+
+td {
+  width: 100vw;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+}
+
