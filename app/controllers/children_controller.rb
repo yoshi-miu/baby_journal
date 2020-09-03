@@ -1,5 +1,10 @@
 class ChildrenController < ApplicationController
   def index
+    if user_signed_in?
+      @children = current_user.children
+    end
+  end
+
   def new
     @child = Child.new
   end

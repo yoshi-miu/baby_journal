@@ -3,7 +3,12 @@
 <div class="main">
   <div class="main-container">
   <% if user_signed_in? %>
+  <div class='main-link'>
     <%= link_to 'お子様情報登録', new_child_path, class: "new-child" %>
+    <% @children.each do |child| %>
+      <%= link_to "#{child.name}のページ", child_path(child.id), class: 'child-link' %>
+    <% end %>
+  </div>
   <% end %>
   </div>
 </div>
