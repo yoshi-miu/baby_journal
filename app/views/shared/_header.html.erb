@@ -1,6 +1,8 @@
 <header class="header">
   <div class="header-bar">
-    <h1 class="title-logo"><a href="/">育児日記</a></h1>
+    <%= link_to root_path do %>
+      <h1 class="title-logo">育児日記</h1>
+    <% end %>
     <% if user_signed_in? %>
       <div class="user-info">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %>

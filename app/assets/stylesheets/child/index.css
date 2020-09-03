@@ -1,0 +1,29 @@
+.main {
+  height: 100vh;
+  margin-top: 10vh;
+}
+
+.main-container {
+  height: 100%;
+  background-color: #fff;
+}
+
+.btn-table {
+  height: 100px;
+  width: 100vw;
+  background-color: #f8fa91;
+  position: fixed;
+  bottom: 0px;
+}
+
+th {
+  padding: 10px 30px;
+  background-color: lightskyblue;
+}
+
+td {
+  width: 100vw;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+}
+
