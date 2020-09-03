@@ -41,7 +41,7 @@ Things you may want to cover:
 | Column    | Type   | Options     |
 | --------- | ------ | ----------- |
 | name      | string | null: false |
-| birth_day | string | null: false |
+| birth_day | date   | null: false |
 | user      | references | null: false, foreign_key: true |
 
 ### Association
