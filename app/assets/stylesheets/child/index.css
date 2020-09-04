@@ -1,10 +1,16 @@
 .main {
   margin-top: 11vh;
   margin-bottom: 1vh;
+  padding-bottom: 8vh;
 }
 
 .main-container {
   background-color: #fff;
+}
+
+.main-link {
+  display: flex;
+  flex-direction: column;
 }
 
 th {

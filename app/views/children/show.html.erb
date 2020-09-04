@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+  <div class='main-container'>
+    <table class="table">
+    <% @times.each do |time| %>
+      <tr>
+        <th><%= time.hour %></th>
+        <td>
+        </td>
+      </tr>
+      <% if time.hour == 23 %>
+        </table>
+          <p class="day">
+            <%= "-----#{time.month}/#{time.day + 1}-----" %>
+          </p>
+          <table>
+        <% end %>
+    <% end %>
+    </table>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

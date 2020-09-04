@@ -65,6 +65,10 @@ header {
   margin-right: 3vw;
 }
 
+.logout {
+  margin-left: 3vw;
+}
+
 .footer {
   border-top: 1px solid #155215;
   width: 100%;
