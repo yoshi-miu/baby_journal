@@ -1,1 +1,22 @@
 <%= render "shared/header" %>
+
+<div class="main">
+  <div class="main-container">
+  <% if user_signed_in? %>
+  <div class='main-link'>
+    <%= link_to 'お子様情報の登録', new_child_path, class: "new-child" %>
+    <div class="edit-child">お子様情報の編集
+      <ul class="edit-child-link">
+        <% @children.each do |child| %>
+          <li class="edit-list">
+            <%= link_to "#{child.name}", edit_child_path(child.id), class: 'child-link' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>
+
+<%= render "shared/second_footer" %>

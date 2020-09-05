@@ -1,0 +1,24 @@
+.main {
+  margin-top: 11vh;
+  margin-bottom: 1vh;
+  padding-bottom: 8vh;
+}
+
+.main-container {
+  background-color: #ffd78c;
+  min-height: 80vh;
+}
+
+.new-child {
+  display: inline-block;
+  margin-bottom: 2vh;
+}
+
+.edit-child-link{
+  margin-top: 1vh;
+  padding-left: 3vw;
+}
+
+.edit-list {
+  list-style: circle;
+}
