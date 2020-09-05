@@ -1,3 +1,24 @@
+.child-main {
+  margin-top: 11vh;
+  margin-bottom: 1vh;
+  padding-bottom: 8vh;
+}
+
+th {
+  padding: 10px 30px;
+  background-color: lightskyblue;
+}
+
+.now {
+  background-color: #ffff00;
+}
+
+td {
+  width: 100vw;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+}
+
 .day {
   text-align: center;
   margin: 1px 0;

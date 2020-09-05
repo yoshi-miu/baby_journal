@@ -1,11 +1,17 @@
 <%= render "shared/header" %>
 
-<div class='main'>
+<div class='child-main'>
   <div class='main-container'>
     <table class="table">
     <% @times.each do |time| %>
       <tr>
-        <th><%= time.hour %></th>
+        <% if time.hour == Time.current.hour %>
+          <th class="now">
+        <% else %>
+          <th>
+        <% end %>
+          <%= time.hour %>
+        </th>
         <td>
         </td>
       </tr>
