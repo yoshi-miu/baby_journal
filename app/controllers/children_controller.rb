@@ -1,6 +1,6 @@
 class ChildrenController < ApplicationController
-before_action :set_child, only: [:show, :edit, :update]
-before_action :set_children, only: [:index, :show]
+  before_action :set_child, only: [:show, :edit, :update]
+  before_action :set_children, only: [:index, :show]
 
   def index
   end
@@ -20,11 +20,10 @@ before_action :set_children, only: [:index, :show]
   end
 
   def show
-    get_times
+    set_times
   end
 
   def edit
-    
   end
 
   def update
@@ -48,17 +47,15 @@ before_action :set_children, only: [:index, :show]
   end
 
   def set_children
-    if user_signed_in?
-      @children = current_user.children
-    end
+    @children = current_user.children if user_signed_in?
   end
 
-  def get_times
+  def set_times
     @t = Time.current
     @times = []
     t = Time.current
     i = 22
-    25.times do |j|
+    25.times do |_j|
       @times << t.ago(i.hours)
       i -= 1
     end
