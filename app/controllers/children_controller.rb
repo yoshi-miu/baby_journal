@@ -1,5 +1,5 @@
 class ChildrenController < ApplicationController
-before_action :set_child, only: [:show]
+before_action :set_child, only: [:show, :edit, :update]
 before_action :set_children, only: [:index, :show]
 
   def index
@@ -21,6 +21,20 @@ before_action :set_children, only: [:index, :show]
 
   def show
     get_times
+  end
+
+  def edit
+    
+  end
+
+  def update
+    @child.update(child_params)
+    if @child.valid?
+      @child.save
+      redirect_to child_path(@child)
+    else
+      render :edit
+    end
   end
 
   private

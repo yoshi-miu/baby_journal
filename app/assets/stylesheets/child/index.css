@@ -5,22 +5,20 @@
 }
 
 .main-container {
-  background-color: #fff;
+  background-color: #ffd78c;
+  min-height: 80vh;
 }
 
-.main-link {
-  display: flex;
-  flex-direction: column;
+.new-child {
+  display: inline-block;
+  margin-bottom: 2vh;
 }
 
-th {
-  padding: 10px 30px;
-  background-color: lightskyblue;
+.edit-child-link{
+  margin-top: 1vh;
+  padding-left: 3vw;
 }
 
-td {
-  width: 100vw;
-  background-color: #fafafa;
-  border: 1px solid #eee;
+.edit-list {
+  list-style: circle;
 }
-
