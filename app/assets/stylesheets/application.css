@@ -31,11 +31,16 @@ a {
   color: #222;
 }
 
+li {
+  list-style: none;
+}
+
 header {
   width: 100vw;
   position: fixed;
   top: 0px;
   background-color: #fbfcc5;
+  z-index: 10;
 }
 
 .header-bk {
@@ -59,6 +64,28 @@ header {
 .user-info {
   display: flex;
   align-items: center;
+}
+
+.child-name {
+  cursor: default;
+  position: relative;
+}
+
+.show-lists {
+  min-width: 50px;
+  position: absolute;
+  top: 1vh;
+  padding: 0;
+  background-color: #cff;
+}
+
+.pull-down-list {
+  font-size: 18px;
+  display: list-item;
+}
+
+.child-link {
+  display: inline-block;
 }
 
 .login {
@@ -110,4 +137,8 @@ footer p {
   background-color: #f8fa91;
   position: fixed;
   bottom: 0px;
+}
+
+.hidden {
+  display: none;
 }

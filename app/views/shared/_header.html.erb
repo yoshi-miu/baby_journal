@@ -5,9 +5,20 @@
     <% end %>
     <% if user_signed_in? %>
       <div class="user-info">
-        <% if @child %>
-          <%= link_to @child.name, child_path(@child.id) %>
-        <% end %>
+        <div class="child-name" id="lists">
+          <% if @child %>
+            <%= @child.name %>
+          <% else %>
+            記録をつける
+          <% end %>
+          <ul class="show-lists hidden" id="pull-down">
+            <% @children.each do |child| %>
+              <li class="pull-down-list">
+                <%= link_to "#{child.name}", child_path(child.id), class: 'child-link' %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %>
       </div>
     <% else %>

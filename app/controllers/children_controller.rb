@@ -1,9 +1,8 @@
 class ChildrenController < ApplicationController
 before_action :set_child, only: [:show]
+before_action :set_children, only: [:index, :show]
+
   def index
-    if user_signed_in?
-      @children = current_user.children
-    end
   end
 
   def new
@@ -32,6 +31,12 @@ before_action :set_child, only: [:show]
 
   def set_child
     @child = Child.find(params[:id])
+  end
+
+  def set_children
+    if user_signed_in?
+      @children = current_user.children
+    end
   end
 
   def get_times
