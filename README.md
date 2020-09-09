@@ -1,26 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+### Version
+* Ruby 2.6.5
+* Ruby on Rails 6.0
+  
+### Database 
+* MySQL
 
 # テーブル設計
 
@@ -54,10 +39,12 @@ Things you may want to cover:
 
 ## breastsテーブル
 
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| side   | string | null: false |
-| time   | string |  |
+| Column      | Type     | Options     |
+| ----------- | -------- | ----------- |
+| side        | string   | null: false |
+| breast_time | integer  | null: false |
+| start_time  | datetime | null: false |
+| end_time    | datetime | null: false |
 | child  | references | null: false, foreign_key: true |
 
 ### Association
@@ -97,3 +84,6 @@ Things you may want to cover:
 ### Association
 
 - belongs_to child
+
+# ER図
+![育児日記ER図](https://user-images.githubusercontent.com/68325686/92546324-33b48300-f28d-11ea-853b-a52f3d2d8f3c.png)
