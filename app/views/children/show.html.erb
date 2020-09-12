@@ -1,29 +1,43 @@
 <%= render "shared/header" %>
 
 <div class='child-main'>
-  <div class='main-container'>
-    <table class="table">
+  <div class='child-container'>
+    <hr>
     <% @times.each do |time| %>
-      <tr>
+      <div class="time-line">
         <% if time.hour == Time.current.hour %>
-          <th class="now">
+          <div class="time now">
         <% else %>
-          <th>
+          <div class="time">
         <% end %>
           <%= time.hour %>
-        </th>
-        <td>
-        </td>
-      </tr>
-      <% if time.hour == 23 %>
-        </table>
-          <p class="day">
-            <%= "-----#{time.month}/#{time.day + 1}-----" %>
-          </p>
-          <table>
+        </div>
+        <div class="item-wrap">
+        <% @breasts.each do |breast| %>
+          <% if time.hour == breast.start_time.hour %>
+              <div class="icon-wrap">
+                <%= breast.start_time.strftime("%H:%M") %>
+                <%= image_tag breast.side, class: "item-icon" %>
+              </div>
+              <div class="item">
+                <%= "#{breast.breast_time / 60}分 "%>
+              </div>
+          <% end %>
         <% end %>
+        </div>
+      </div>
+      <hr>
+      <% if time.hour == 23 %>
+        <div class="date-line">
+          <hr class="line">
+          <p class="day">
+            <%= "#{time.month}/#{time.day + 1}" %>
+          </p>
+          <hr class="line">
+        </div>
+        <hr>
+      <% end %>
     <% end %>
-    </table>
   </div>
 </div>
 
