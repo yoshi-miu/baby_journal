@@ -12,11 +12,11 @@
 
   <div class="form-time">
     <p>飲み始め時間</p>
-    <%= f.datetime_select :start_time, default: Time.now - 15.minute, use_month_numbers: true %>
+    <%= f.datetime_select :start_time, default: Time.current - 15.minute, use_month_numbers: true %>
   </div>
   <div class="form-time">
     <p>飲み終わり時間</p>
-    <%= f.datetime_select :end_time, default: Time.now, use_month_numbers: true %>
+    <%= f.datetime_select :end_time, default: Time.current, use_month_numbers: true %>
   </div>
 
   <div class="btn-wrap">
