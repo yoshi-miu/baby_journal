@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_03_093627) do
+ActiveRecord::Schema.define(version: 2020_09_09_024103) do
 
   create_table "bottles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content", null: false
@@ -23,10 +23,12 @@ ActiveRecord::Schema.define(version: 2020_09_03_093627) do
 
   create_table "breasts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "side", null: false
-    t.string "time"
+    t.integer "breast_time"
     t.bigint "child_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "start_time", null: false
+    t.datetime "end_time", null: false
     t.index ["child_id"], name: "index_breasts_on_child_id"
   end
 

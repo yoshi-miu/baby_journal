@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'children#index'
-  resources :children
+  resources :children do
+    resources :breasts, only: [:new,:create]
+  end
 end

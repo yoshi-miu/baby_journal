@@ -1,11 +1,14 @@
 <footer class="footer">
   <%= link_to "育児日記", root_path, class: "footer-logo"%>
   <p>©︎ BabyJournal28292</p>
-<<<<<<< HEAD
 </footer>
-=======
-</footer>
-<div class="btn-table">
+<div class="btn-list">
+<%= link_to new_child_breast_path(@child.id), class: "link-icon" do %>
+  <%= image_tag 'breast.png', class: "icon" %>
+<% end %>
 
+<%= image_tag 'timer.png', class: "icon" %>
+<%= image_tag 'bottole.png', class: "icon" %>
+<%= image_tag 'pee.png', class: "icon" %>
+<%= image_tag 'poop.png', class: "icon" %>
 </div>
->>>>>>> master
