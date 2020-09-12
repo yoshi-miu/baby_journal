@@ -21,6 +21,7 @@ class ChildrenController < ApplicationController
 
   def show
     set_times
+    set_items
   end
 
   def edit
@@ -54,10 +55,14 @@ class ChildrenController < ApplicationController
     @t = Time.current
     @times = []
     t = Time.current
-    i = 22
-    25.times do |_j|
+    i = 7
+    11.times do |_j|
       @times << t.ago(i.hours)
       i -= 1
     end
+  end
+
+  def set_items
+    @breasts = @child.breasts
   end
 end

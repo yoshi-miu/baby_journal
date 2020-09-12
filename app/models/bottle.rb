@@ -1,3 +1,3 @@
 class Bottle < ApplicationRecord
-  belongs_to child
+  belongs_to :child
 end

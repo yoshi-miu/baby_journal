@@ -131,14 +131,33 @@ footer p {
   bottom: 0;
 }
 
-.btn-table {
-  height: 100px;
+.btn-list {
+  height: 10vh;
   width: 100vw;
   background-color: #f8fa91;
   position: fixed;
   bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .hidden {
   display: none;
+}
+
+.link-icon {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon {
+  height: 80%;
+
+}
+
+.icon-back{
+  background-color: #FFA2C4;
 }
