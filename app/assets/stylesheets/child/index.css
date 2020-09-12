@@ -4,9 +4,10 @@
   padding-bottom: 8vh;
 }
 
-.main-container {
-  background-color: #ffd78c;
-  min-height: 80vh;
+.sample {
+  height: 80%;
+  width: 80%;
+  border: 1px solid #333;
 }
 
 .new-child {
