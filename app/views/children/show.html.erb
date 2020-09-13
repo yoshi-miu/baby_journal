@@ -14,7 +14,7 @@
         </div>
         <div class="item-wrap">
         <% @breasts.each do |breast| %>
-          <% if time.hour == breast.start_time.hour %>
+          <% if time.strftime("%F/%H") == breast.start_time.strftime("%F/%H") %>
               <div class="icon-wrap">
                 <%= breast.start_time.strftime("%H:%M") %>
                 <%= image_tag breast.side, class: "item-icon" %>
