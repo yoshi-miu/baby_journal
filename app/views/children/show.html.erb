@@ -12,19 +12,25 @@
         <% end %>
           <%= time.hour %>
         </div>
-        <div class="item-wrap">
+
+        <div class="time-line-bk">
+        </div>
+
         <% @breasts.each do |breast| %>
           <% if time.strftime("%F/%H") == breast.start_time.strftime("%F/%H") %>
+            <div class="item-wrap">
               <div class="icon-wrap">
                 <%= breast.start_time.strftime("%H:%M") %>
-                <%= image_tag breast.side, class: "item-icon" %>
+                <%= link_to edit_child_breast_path(@child.id, breast.id), class: "edit-breast" do %>
+                  <%= image_tag breast.side, class: "item-icon" %>
+                <% end %>
               </div>
               <div class="item">
                 <%= "#{breast.breast_time / 60}分 "%>
               </div>
+            </div>
           <% end %>
         <% end %>
-        </div>
       </div>
       <hr>
       <% if time.hour == 23 %>
