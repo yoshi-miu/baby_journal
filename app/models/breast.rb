@@ -6,7 +6,7 @@ class Breast < ApplicationRecord
   with_options presence: true do
     validates :side
     validates :start_time
-    validates :end_time, numericality: { greater_than: :start_time, message: "must be greater than start time."}
+    validates :end_time, numericality: { greater_than: :start_time, message: 'must be greater than start time.' }
   end
 
   def breast_time_save
