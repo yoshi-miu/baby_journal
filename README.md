@@ -1,5 +1,3 @@
-# README
-
 # アプリケーション名
 baby_journal(育児日記)
 
