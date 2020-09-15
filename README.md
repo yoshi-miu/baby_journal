@@ -10,11 +10,11 @@ baby_journal(育児日記)
 https://baby-journal-28292.herokuapp.com/
 
 # Basic認証
-ID: baby
+ID: baby  
 パスワード: 28292
 
 # テスト用アカウント
-メールアドレス: test@test.com
+メールアドレス: test@test.com  
 パスワード: 123qwe
 
 # 利用方法
@@ -24,7 +24,7 @@ ID: baby
   - 登録済み
     - ログイン → 右上の記録をつけるから名前をクリック
 - 授乳記録
-  - 画面左下のアイコン<img src="https://user-images.githubusercontent.com/68325686/93076953-19cad400-f6c3-11ea-9b39-a2491fa76c8a.png" width="32px">をクリック → 時間と左右を選択し登録
+  - 詳細ページの画面左下のアイコン<img src="https://user-images.githubusercontent.com/68325686/93076953-19cad400-f6c3-11ea-9b39-a2491fa76c8a.png" width="32px">をクリック → 時間と左右を選択し登録
 
 # 目指した課題解決
 乳児のいる親御さんの、
@@ -53,9 +53,9 @@ ID: baby
   - 開始時間を基準に時間ごとに表示される
 
 # 実装予定の機能
-授乳タイマー機能
-排便記録機能
-日記機能
+- 授乳タイマー機能
+- 排便記録機能
+- 日記機能
 
 ### Version
 - Ruby 2.6.5
