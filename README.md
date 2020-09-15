@@ -57,11 +57,11 @@ ID: baby
 - 排便記録機能
 - 日記機能
 
-### Version
+# Version
 - Ruby 2.6.5
 - Ruby on Rails 6.0
 
-### Database 
+# Database 
 - MySQL
 
 # テーブル設計
