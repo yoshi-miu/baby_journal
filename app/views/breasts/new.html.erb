@@ -30,7 +30,7 @@
       </label>
   </div>
   <%= f.submit '保存', class: "submit" %>
-  <%= link_to "戻る", child_path(@child.id), class: "back-btn" %>
+  <%= link_to "戻る", child_path(params[:child_id]), class: "back-btn" %>
 </div>
 <% end %>
 
