@@ -1,10 +1,10 @@
 <%= render "shared/second_header" %>
 
-<%= form_with model: @breast, url: child_breasts_path(params[:child_id]), class: "breast-form", local: true do |f| %>
+<%= form_with model: @breast, url: child_breast_path(params[:child_id]), class: "breast-form", local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
-      授乳記録
+      授乳記録編集
     </h1>
   </div>
 
@@ -12,11 +12,11 @@
 
   <div class="form-time">
     <p>飲み始め時間</p>
-    <%= f.datetime_select :start_time, default: Time.current - 15.minute, use_month_numbers: true %>
+    <%= f.datetime_select :start_time, default: @breast.start_time, use_month_numbers: true %>
   </div>
   <div class="form-time">
     <p>飲み終わり時間</p>
-    <%= f.datetime_select :end_time, default: Time.current, use_month_numbers: true %>
+    <%= f.datetime_select :end_time, default: @breast.end_time, use_month_numbers: true %>
   </div>
 
   <div class="btn-wrap">
@@ -30,10 +30,9 @@
       </label>
   </div>
   <%= f.submit '保存', class: "submit" %>
-  <%= link_to "戻る", child_path(@child.id), class: "back-btn" %>
+  <%= link_to "戻る", child_path(params[:child_id]), class: "back-btn" %>
 </div>
 <% end %>
-
 
 
 <%= render "shared/second_footer" %>
